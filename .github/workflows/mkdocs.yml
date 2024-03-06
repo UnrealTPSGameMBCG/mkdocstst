@@ -2,8 +2,8 @@ name: Publish MkDocs
 on:
   push:
     branches:
-      - main
-      #- not-existing-branch
+      #- main
+      - not-existing-branch
 
 permissions:
   contents: write
