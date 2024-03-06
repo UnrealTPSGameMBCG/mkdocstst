@@ -26,7 +26,7 @@ jobs:
             mkdocs-material-
       - run: pip install mkdocs-material 
 
-      ## Deploy MkDocs site to 'mkdocs-pages' branch
+      ## Deploy MkDocs site
       - name: Deploy MkDocs 
         run: |
           mkdocs gh-deploy --clean
