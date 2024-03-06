@@ -2,8 +2,8 @@ name: Publish MkDocs
 on:
   push:
     branches:
-      #- main
-      - not-existing-branch
+      - main
+      #- not-existing-branch
 
 permissions:
   contents: write
@@ -26,9 +26,7 @@ jobs:
             mkdocs-material-
       - run: pip install mkdocs-material 
 
-     ## Deploy MkDocs site to 'mkdocs-pages' branch
+      ## Deploy MkDocs site to 'mkdocs-pages' branch
       - name: Deploy MkDocs 
         run: |
-          mkdocs gh-deploy --force -f devops/mkdocs/mkdocs.yml --remote-branch mkdocs-pages 
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}   
+          mkdocs gh-deploy --clean
