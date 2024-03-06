@@ -15,9 +15,13 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v4
         with:
-          python-version: '3.x'
-          node-version: '20'
-        
+          python-version: 3.x
+      
+      # for mkdocs Material theme
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+    
       - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV 
       - uses: actions/cache@v4
         with:
