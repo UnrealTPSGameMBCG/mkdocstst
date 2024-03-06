@@ -28,6 +28,5 @@ jobs:
 
       ## Deploy MkDocs site to 'mkdocs-pages' branch
       - name: Deploy MkDocs 
-        working-directory: ./docs        
         run: |
           mkdocs gh-deploy --clean
