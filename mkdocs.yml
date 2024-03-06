@@ -1,0 +1,13 @@
+site_name: Test MkDocs Documentation
+#docs_dir: docs # "docs" is a default value
+
+nav:
+  - Home: index.md
+  - About: about.md
+
+theme:
+  name: material
+
+## directiry where mkdocs documentation will be published
+## site_dir must not be inside docs_dir
+##site_dir: site  #"site" in a current dir is a default value
